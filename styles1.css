@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* 基本樣式設定 */
+header, nav, footer {
+  background-color: #f8f9fa;
+}
+
+header a img {
+  max-height: 50px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* 下拉選單的圖標調整 */
+.navbar .dropdown-toggle::before {
+  content: none;
+}
+
+.navbar .nav-link {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .bi-list {
+  margin-right: 5px;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  header .col-md-2,
+  header .col-md-6,
+  header .col-md-4 {
+      text-align: center;
+      margin-bottom: 10px;
+  }
+  
+  header .col-md-2 {
+      order: 2;
+  }
+
+  header .col-md-6 {
+      order: 1;
+  }
+
+  header .col-md-4 {
+      order: 3;
+  }
+}
+  
+  .hero {
+    position: relative;
+    text-align: left;
+    color: black;
+    background-color: #f4f4f4;
+    height: 600px;
+  }
+  
+  .hero img {
+    position: absolute;
+    top: 10%;
+    width: 500px;
+    height: auto;
+    padding: 10px;
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+  }
+  
+  .hero-text h2 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+  }
+  .hero-text button{
+    font-weight: bolder;
+  }
+  .btn1{
+    background-color: #c4c2bb;
+  }
+  .btn2{
+    background-color: #c4c2bb;
+  }
+  .products{
+    padding: 20px;
+  }
+  
+  .btn a{
+    text-decoration: none;
+    color: #000;
+  }
+  /* 愛心圖標初始樣式 */
+  .heart-icon {
+    font-size: 1.5rem;
+    color: grey;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .heart-icon.red {
+    color: red;
+  }
+  
+  /* 加入購物車按鈕初始隱藏 */
+  .add-to-cart-btn {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* 產品圖片的放大效果 */
+  .product-card:hover .product-image {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+  
+  /* 顯示加入購物車按鈕 */
+  .product-card:hover .add-to-cart-btn {
+    display: block;
+  }
+  
+  /* 顯示愛心圖標並設置定位 */
+  .product-card .heart-icon {
+    z-index: 2;
+    
+  }
+  
+  .product-card {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* 防止圖片放大時溢出 */
+  .product-card .product-image {
+    width: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+  
